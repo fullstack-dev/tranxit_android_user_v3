@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.schedule.ScheduleFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/clanpro_medium"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/schedule_a_ride"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_18" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:hint="@string/choose_a_date"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="@dimen/text_18" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:hint="@string/choose_a_time"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="@dimen/text_18" />
+
+    <Button
+        android:id="@+id/schedule_request"
+        style="@style/MyButton.Primary"
+        android:text="@string/schedule_request" />
+
+</LinearLayout>

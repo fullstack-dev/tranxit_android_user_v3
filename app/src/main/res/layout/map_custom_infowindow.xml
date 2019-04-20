@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvEstimatedFare"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/map_marker_shadow"
+    android:fontFamily="@font/clanpro_medium"
+    android:gravity="center"
+    android:textColor="@color/colorPrimaryText"
+    android:textSize="@dimen/text_12" />

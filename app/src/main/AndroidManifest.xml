@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tranxitpro.user">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <permission
+        android:name="com.tranxitpro.user.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.tranxit.app.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".MvpApplication"
+        android:allowBackup="true"
+        android:configChanges="locale"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_key" />
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/FACEBOOK_APP_ID" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_push" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+
+        <service
+            android:name=".common.fcm.MyFireBaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.facebook.accountkit.ui.AccountKitActivity" />
+        <activity
+            android:name=".ui.activity.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.main.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Transparent" />
+        <activity
+            android:name=".ui.activity.OnBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.register.RegisterActivity"
+            android:label="@string/register"
+            android:parentActivityName=".ui.activity.OnBoardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.login.EmailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.login.PasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.profile.ProfileActivity"
+            android:label="@string/profile"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.change_password.ChangePasswordActivity"
+            android:label="@string/change_password"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.help.HelpActivity"
+            android:label="@string/help"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.your_trips.YourTripActivity"
+            android:label="@string/your_trips"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tranxitpro.user.ui.activity.main.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.passbook.WalletHistoryActivity"
+            android:label="@string/passbook"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tranxitpro.user.ui.activity.main.MainActivity" />
+        </activity>
+
+        <!-- android:name=".ui.baseActivity.payment.PaymentActivity" -->
+        <!-- android:label="@string/payment" -->
+        <!-- android:parentActivityName=".ui.baseActivity.main.MainActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+
+        <activity
+            android:name=".ui.activity.FaqActivity"
+            android:label="@string/faq_support"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TermsActivity"
+            android:label="@string/terms_and_conditions"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PrivacyActivity"
+            android:label="@string/privacy_policy"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.past_trip_detail.PastTripDetailActivity"
+            android:label="@string/past_trip_details"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.upcoming_trip_detail.UpcomingTripDetailActivity"
+            android:label="@string/upcoming_trip_details"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.setting.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.location_pick.LocationPickActivity"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tranxitpro.user.ui.activity.main.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.wallet.WalletActivity"
+            android:label="@string/wallet"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.coupon.CouponActivity"
+            android:label="@string/offer"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.social.SocialLoginActivity"
+            android:label="@string/white_space"
+            android:parentActivityName=".ui.activity.OnBoardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.payment.PaymentActivity"
+            android:label="@string/payment"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.add_card.AddCardActivity"
+            android:label="@string/add_card_for_payments"
+            android:parentActivityName=".ui.activity.payment.PaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activity.forgot_password.ForgotPasswordActivity"
+            android:label="@string/reset_password"
+            android:parentActivityName=".ui.activity.login.PasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.card.CardsActivity"
+            android:label="@string/select_card"
+            android:parentActivityName=".ui.activity.wallet.WalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:label="@string/chat"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".common.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="3aef7a5b05836cf8166f23c95e43c52517bee917" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".ui.activity.invite_friend.InviteFriendActivity"
+            android:label="@string/invite_friend"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.notification_manager.NotificationManagerActivity"
+            android:label="@string/notification_manager"
+            android:parentActivityName=".ui.activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

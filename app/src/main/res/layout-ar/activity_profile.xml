@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".ui.activity.profile.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/cardTrue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="card\ntrue" />
+
+            <Button
+                android:id="@+id/cardfalse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="card\nfalse" />
+
+            <Button
+                android:id="@+id/cashTrue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cash\ntrue" />
+
+            <Button
+                android:id="@+id/cashFalse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cash\nfalse" />
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picture"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/ic_user_placeholder"
+            android:transitionName="picture" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/first_name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/colorSecondaryText" />
+
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/clanpro_narrnews"
+                    android:gravity="end"
+                    android:inputType="textPersonName|textPersonName|textCapWords"
+                    android:padding="12dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/text_18" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/last_name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/colorSecondaryText" />
+
+                <EditText
+                    android:id="@+id/last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/clanpro_narrnews"
+                    android:gravity="end"
+                    android:inputType="textPersonName|textPersonName|textCapWords"
+                    android:padding="12dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/text_18" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="0dp"
+                android:text="@string/phone_number"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/colorSecondaryText" />
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="0dp"
+                android:text="@string/email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/colorSecondaryText" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:gravity="end"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save"
+            style="@style/MyButton.Primary"
+            android:layout_margin="12dp"
+            android:padding="8dp"
+            android:text="@string/save"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/looking_to_change_password"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_14"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

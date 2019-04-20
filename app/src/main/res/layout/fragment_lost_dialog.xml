@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/clanpro_medium"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/lost_item"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_18" />
+
+    <EditText
+        android:id="@+id/lost_item_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_border"
+        android:gravity="top|start"
+        android:hint="@string/mention_the_last_item"
+        android:inputType="textMultiLine|textAutoComplete|textPersonName|textCapWords"
+        android:lines="3"
+        android:maxLength="250"
+        android:maxLines="3"
+        android:visibility="visible"
+        android:padding="16dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dismiss"
+            style="@style/MyButton.Primary"
+            android:visibility="gone"
+            android:text="@string/dismiss" />
+
+        <!--<Button
+            android:id="@+id/submit"
+            style="@style/MyButton.Accent"
+            android:text="@string/submit" />-->
+        <Button
+            android:id="@+id/submit"
+            style="@style/MyButton.Primary"
+            android:text="@string/submit" />
+
+    </LinearLayout>
+
+</LinearLayout>

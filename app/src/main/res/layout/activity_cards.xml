@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.card.CardsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cards_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/paypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_paypal"
+            android:drawablePadding="8dp"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:singleLine="true"
+            android:text="@string/paypal"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_14" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_card"
+        style="@style/MyButton.Primary"
+        android:layout_alignParentBottom="true"
+        android:text="@string/add_new_card" />
+
+</RelativeLayout>

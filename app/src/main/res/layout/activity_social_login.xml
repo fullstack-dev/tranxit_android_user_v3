@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.social.SocialLoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:fontFamily="@font/clanpro_narrnews"
+                android:padding="16dp"
+                android:text="@string/choose_an_account"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:drawableStart="@drawable/ic_facebook"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="12dp"
+            android:padding="16dp"
+            android:text="@string/facebook"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_18" />
+
+        <TextView
+            android:id="@+id/google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:drawableStart="@drawable/ic_google"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:drawablePadding="12dp"
+            android:padding="16dp"
+            android:text="@string/google"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_18" />
+
+    </LinearLayout>
+
+</LinearLayout>

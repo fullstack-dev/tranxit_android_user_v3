@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@drawable/dotted"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/promoCode_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/clanpro_medium"
+            android:padding="@dimen/_3sdp"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_12" />
+
+        <TextView
+            android:id="@+id/promoCode_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/clanpro_medium"
+            android:gravity="end"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/use"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_14" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/promoCode_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/clanpro_medium"
+        android:padding="@dimen/_3sdp"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="@dimen/text_14" />
+
+    <TextView
+        android:id="@+id/promoCode_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/clanpro_narrnews"
+        android:padding="@dimen/_3sdp"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="@dimen/text_12" />
+
+</LinearLayout>

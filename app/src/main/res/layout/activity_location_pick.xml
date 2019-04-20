@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.activity.location_pick.LocationPickActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/ic_pin" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title=" " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llSource"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="#ededed"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/source"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="@string/pickup_location"
+                        android:inputType="textPostalAddress|textPersonName|textCapWords"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:tag="source"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textColorHint="#AAA"
+                        android:textSize="@dimen/text_14" />
+
+                    <ImageView
+                        android:id="@+id/reset_source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:padding="14dp"
+                        android:tint="#AAA"
+                        app:srcCompat="@drawable/ic_close" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/destination_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="#ededed"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/destination"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="@string/where_to"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPostalAddress|textPersonName|textCapWords"
+                        android:padding="12dp"
+                        android:singleLine="true"
+                        android:tag="destination"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textColorHint="#AAA"
+                        android:textSize="@dimen/text_14" />
+
+                    <ImageView
+                        android:id="@+id/reset_destination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:padding="14dp"
+                        android:tint="#AAA"
+                        app:srcCompat="@drawable/ic_close" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/dd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/location_bs_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#FFF"
+            android:orientation="vertical"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="100dp"
+            app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/locations_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="#EEE" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/home_address_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/ic_home"
+                                android:drawablePadding="8dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/clanpro_narrnews"
+                                android:gravity="center_vertical"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="@string/home"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="@dimen/text_14" />
+
+                            <TextView
+                                android:id="@+id/home_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:textColor="@color/colorSecondaryText"
+                                android:textSize="@dimen/text_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/work_address_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_bottom"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:drawableStart="@drawable/ic_work"
+                                android:drawablePadding="8dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/clanpro_narrnews"
+                                android:gravity="center_vertical"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:text="@string/work"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="@dimen/text_14" />
+
+                            <TextView
+                                android:id="@+id/work_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:textColor="@color/colorSecondaryText"
+                                android:textSize="@dimen/text_14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.design.widget.CoordinatorLayout>

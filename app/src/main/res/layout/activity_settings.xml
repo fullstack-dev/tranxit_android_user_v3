@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.setting.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:fontFamily="@font/clanpro_medium"
+                android:padding="16dp"
+                android:text="@string/favorites"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_home"
+                        android:drawablePadding="8dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/clanpro_narrnews"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@string/home"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="@dimen/text_14" />
+
+                    <TextView
+                        android:id="@+id/home_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/clanpro_narrnews"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@string/add"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/home_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="@dimen/text_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_work"
+                        android:drawablePadding="8dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/clanpro_narrnews"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@string/work"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="@dimen/text_14" />
+
+                    <TextView
+                        android:id="@+id/work_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/clanpro_narrnews"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:text="@string/add"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="@dimen/text_14" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/work_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="@dimen/text_14" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:fontFamily="@font/clanpro_medium"
+                android:padding="16dp"
+                android:text="@string/choose_language"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_18" />
+
+            <RadioGroup
+                android:id="@+id/choose_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/english"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:checked="true"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/clanpro_narrnews"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:text="@string/english"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/text_18" />
+
+                <RadioButton
+                    android:id="@+id/arabic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/clanpro_narrnews"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:text="@string/arabic"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/text_18" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

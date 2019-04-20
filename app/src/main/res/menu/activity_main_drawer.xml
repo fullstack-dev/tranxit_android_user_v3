@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_payment"
+            android:title="@string/payment" />
+        <item
+            android:id="@+id/nav_your_trips"
+            android:title="@string/your_trips" />
+        <item
+            android:id="@+id/nav_coupon"
+            android:title="@string/offer" />
+        <item
+            android:id="@+id/nav_wallet"
+            android:title="@string/wallet" />
+        <item
+            android:id="@+id/nav_passbook"
+            android:title="@string/passbook" />
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/nav_notification"
+            android:title="@string/notification_manager" />
+        <item
+            android:id="@+id/nav_help"
+            android:title="@string/help" />
+        <item
+            android:id="@+id/nav_share"
+            android:title="@string/share" />
+        <item
+            android:id="@+id/nav_become_driver"
+            android:title="@string/become_driver" />
+        <item
+            android:id="@+id/nav_invite_friend"
+            android:title="@string/invite_friend" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/logout" />
+    </group>
+</menu>

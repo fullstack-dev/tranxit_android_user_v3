@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/braintreepayment/braintreepayment.iml" filepath="$PROJECT_DIR$/braintreepayment/braintreepayment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nativechekoutpaypal/nativechekoutpaypal.iml" filepath="$PROJECT_DIR$/nativechekoutpaypal/nativechekoutpaypal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/paytmpayment/paytmpayment.iml" filepath="$PROJECT_DIR$/paytmpayment/paytmpayment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stripepayment/stripepayment.iml" filepath="$PROJECT_DIR$/stripepayment/stripepayment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tranxit_android_user_new.iml" filepath="$PROJECT_DIR$/tranxit_android_user_new.iml" />
+    </modules>
+  </component>
+</project>

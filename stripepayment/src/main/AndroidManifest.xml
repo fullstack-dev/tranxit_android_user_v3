@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tranxit.stripepayment">
+
+    <application>
+
+        <activity
+            android:name="com.tranxit.stripepayment.activity.add_card.StripeAddCardActivity"
+            android:label="@string/stripe_payment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+    </application>
+
+</manifest>

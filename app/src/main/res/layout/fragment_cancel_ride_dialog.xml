@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/clanpro_medium"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/reason_for_canceling"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_18" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcvReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/cancel_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_border"
+        android:gravity="top|start"
+        android:hint="@string/write_your_comment"
+        android:inputType="textMultiLine|textAutoComplete|textPersonName|textCapWords"
+        android:lines="3"
+        android:maxLength="250"
+        android:maxLines="3"
+        android:padding="16dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_14"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dismiss"
+            style="@style/MyButton.Primary"
+            android:text="@string/dismiss" />
+
+        <Button
+            android:id="@+id/submit"
+            style="@style/MyButton.Accent"
+            android:text="@string/submit" />
+
+    </LinearLayout>
+
+</LinearLayout>

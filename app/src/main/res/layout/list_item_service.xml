@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/estimated_fixed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:fontFamily="@font/clanpro_narrnews"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/estimated_fare"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:id="@+id/frame_service"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_2sdp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_user_placeholder" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:drawablePadding="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/clanpro_narrnews"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/estimated_fare"
+        android:textAllCaps="false"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/service_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/clanpro_narrnews"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/estimated_fare"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp" />
+
+</LinearLayout>

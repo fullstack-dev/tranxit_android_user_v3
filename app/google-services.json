@@ -1,0 +1,177 @@
+{
+  "project_info": {
+    "project_number": "405772036882",
+    "firebase_url": "https://tranxitswiftbase.firebaseio.com",
+    "project_id": "tranxitswiftbase",
+    "storage_bucket": "tranxitswiftbase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405772036882:android:b42055d18bb5fea2",
+        "android_client_info": {
+          "package_name": "com.tranxitpro.partner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405772036882-m8dc224af3h32aau30v4kpf35imf138h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranxitpro.partner",
+            "certificate_hash": "9ad3ae5150044dbf5c465010916f4e5840d501ad"
+          }
+        },
+        {
+          "client_id": "405772036882-7f15h713miik8uvpilku84ch8pebi4lg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranxitpro.partner",
+            "certificate_hash": "96019ad28bc6388ef77f526b2d2e1a116af3ad37"
+          }
+        },
+        {
+          "client_id": "405772036882-o4flm5gsicunha38i7ns3e0qigv14d2a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranxitpro.partner",
+            "certificate_hash": "42480591310856575b46e83b46f01235073e2514"
+          }
+        },
+        {
+          "client_id": "405772036882-471ubj4f1t14248tmp4pfb9bil8u91e9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranxitpro.partner",
+            "certificate_hash": "c0735e9cef48488ad7e13b631937bef68e353a5d"
+          }
+        },
+        {
+          "client_id": "405772036882-r2atb9qtmt1f5kth676vp4hblfcom3ku.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranxitpro.partner",
+            "certificate_hash": "d9bde3c7a50376ca6c38005e7146eff24e0c62f7"
+          }
+        },
+        {
+          "client_id": "405772036882-ib15rm0b0f5cq3mpqbljk9b28f6d0j4u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdXoVw-M-g4vgEOZZK7Dc9jMUlLR5xVXI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405772036882-6ahcv0r2lv47mkfu2qalm6j5npheglas.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "405772036882-gtvsfif3oee6hkek4e26183o97fcpeb0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appoets.tranxit.provider"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405772036882:android:cfaac52bf845f5df",
+        "android_client_info": {
+          "package_name": "com.tranxitpro.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405772036882-b4sgh0kl621e3eegoqgighrlltjm7fpe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranxitpro.user",
+            "certificate_hash": "c0735e9cef48488ad7e13b631937bef68e353a5d"
+          }
+        },
+        {
+          "client_id": "405772036882-r28j51draf1cqqgl07aisumsm051b9sn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranxitpro.user",
+            "certificate_hash": "96019ad28bc6388ef77f526b2d2e1a116af3ad37"
+          }
+        },
+        {
+          "client_id": "405772036882-do07cda27drff5d47i0tsf8l88s8rj6f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranxitpro.user",
+            "certificate_hash": "fcc0d3a0ebbc5f289ffa952f54718deba0408368"
+          }
+        },
+        {
+          "client_id": "405772036882-jhdge8qnrruok6lf8vmfo8q2llre91mt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranxitpro.user",
+            "certificate_hash": "9ad3ae5150044dbf5c465010916f4e5840d501ad"
+          }
+        },
+        {
+          "client_id": "405772036882-tbnpmhkj5bsi24qmivji7jl3j0t11r38.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tranxitpro.user",
+            "certificate_hash": "d9bde3c7a50376ca6c38005e7146eff24e0c62f7"
+          }
+        },
+        {
+          "client_id": "405772036882-ib15rm0b0f5cq3mpqbljk9b28f6d0j4u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdXoVw-M-g4vgEOZZK7Dc9jMUlLR5xVXI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405772036882-6ahcv0r2lv47mkfu2qalm6j5npheglas.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "405772036882-gtvsfif3oee6hkek4e26183o97fcpeb0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appoets.tranxit.provider"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

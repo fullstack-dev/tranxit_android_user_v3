@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StripePayment</string>
+    <string name="please_enter_card_number">please enter card number</string>
+    <string name="please_enter_card_expiration_details">please enter card expiry details</string>
+    <string name="please_enter_card_cvv">please enter card cvv</string>
+    <string name="stripe_payment">Stripe Payment</string>
+    <string name="add_card_details">Add card Details</string>
+</resources>
